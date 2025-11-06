@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|c:\\users\\joao.vsferreira23\\onedrive\\github\\03\\veiculoapp\\controller\\motoristacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|solutionrelative:controller\\motoristacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|c:\\users\\joao.vsferreira23\\onedrive\\github\\03\\veiculoapp\\controller\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|solutionrelative:controller\\veiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|c:\\users\\joao.vsferreira23\\onedrive\\github\\03\\veiculoapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|c:\\users\\joao.vsferreira23\\onedrive\\github\\03\\veiculoapp\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|solutionrelative:models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|c:\\users\\joao.vsferreira23\\onedrive\\github\\03\\veiculoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|c:\\users\\joao.vsferreira23\\onedrive\\github\\03\\veiculoapp\\models\\motorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F88838-B93C-4D92-93BC-A6970DFBFC33}|VeiculoApp.csproj|solutionrelative:models\\motorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MotoristaController.cs",
+              "DocumentMoniker": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Controller\\MotoristaController.cs",
+              "RelativeDocumentMoniker": "Controller\\MotoristaController.cs",
+              "ToolTip": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Controller\\MotoristaController.cs",
+              "RelativeToolTip": "Controller\\MotoristaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T22:10:41.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VeiculoController.cs",
+              "DocumentMoniker": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Controller\\VeiculoController.cs",
+              "RelativeDocumentMoniker": "Controller\\VeiculoController.cs",
+              "ToolTip": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Controller\\VeiculoController.cs",
+              "RelativeToolTip": "Controller\\VeiculoController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:49:48.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Motorista.cs",
+              "DocumentMoniker": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Models\\Motorista.cs",
+              "RelativeDocumentMoniker": "Models\\Motorista.cs",
+              "ToolTip": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Models\\Motorista.cs",
+              "RelativeToolTip": "Models\\Motorista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T22:08:47.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Veiculo.cs",
+              "DocumentMoniker": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Models\\Veiculo.cs",
+              "RelativeDocumentMoniker": "Models\\Veiculo.cs",
+              "ToolTip": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Models\\Veiculo.cs",
+              "RelativeToolTip": "Models\\Veiculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:43:25.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:48:22.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\joao.vsferreira23\\OneDrive\\GitHub\\03\\VeiculoApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:36:58.516Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

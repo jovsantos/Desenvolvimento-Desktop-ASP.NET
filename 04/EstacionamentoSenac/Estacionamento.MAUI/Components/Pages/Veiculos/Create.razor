@@ -1,0 +1,36 @@
+﻿@page "/veiculos/create"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Novo Veículo</h3>
+   <hr />
+    <div class="row">
+    <div class="col-md-4">
+
+<form @onsubmit ="CreateVeiculo">
+
+   <div class="form-group">
+    <label for="marca" class="control-label">Marca</label>
+    <input for="marca" class="form-control" @bind="@veiculo.Marca"/>
+   </div>
+<div class="form-group">
+<label for="modelo" class="control-label">Modelo</label>
+<input for="modelo" class="form-control" @bind="@veiculo.Modelo"/>
+</div>
+<div class="form-group mt-3">
+   <input type="submit" value="Salvar" class="btn btn-primary" />
+   <a href="#" class="btn btn-light">Voltar</a>
+</div>
+     </form>
+    </div>
+</div>
+@code {
+    Veiculo veiculo = new Veiculo();
+    async Task CreateVeiculo()
+    {
+        await Http.PostAsJsonAsync("https://localhost:4000/api/Veiculos", veiculo);
+        NavigationManager.NavigateTo("/veiculos"); // Redireciona para a lista de veículos após a criação
+    }
+
+}

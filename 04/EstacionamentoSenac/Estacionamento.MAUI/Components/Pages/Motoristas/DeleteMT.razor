@@ -1,0 +1,56 @@
+﻿@page "/motoristas/delete/{id:int}"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+@inject NavigationManager NavigationManager;
+
+<h3>Excluir Motorista</h3>
+
+@if (motoristas == null)
+{
+    <p><em>Carregando... </em></p>
+}
+else
+{
+    <div>
+        <h4>Motorista</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nome
+            </dt>
+            <dd class="col-sm-10">
+                @motoristas.Nome
+            </dd>
+            <dt class="col-sm-2">
+                VeiculoId
+            </dt>
+            <dd class="col-sm-10">
+                @motoristas.VeiculoId
+            </dd>
+        </dl>
+
+        <form @onsubmit="DeleteMotorista">
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <a href="/motoristas" class="btn btn-light">Voltar</a>
+        </form>
+    </div>
+}
+@code {
+    [Parameter]
+
+    public int Id { get; set; }
+
+    private Motorista? motoristas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        motoristas = await Http.GetFromJsonAsync<Motorista>($"https://localhost:4000/api/Veiculos/{Id}");
+    }
+    async Task DeleteMotorista()
+    {
+        await Http.DeleteAsync($"https://localhost:4000/api/Veiculos/{Id}");
+        await Task.Delay(1000);
+        NavigationManager.NavigateTo("/motoristas");
+    }
+}

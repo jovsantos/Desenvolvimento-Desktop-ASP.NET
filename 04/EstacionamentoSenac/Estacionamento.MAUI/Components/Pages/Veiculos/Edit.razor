@@ -1,0 +1,52 @@
+﻿@page "/veiculos/edit/{id:int}"
+@using Estacionamento.MAUI.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>Editar Veículo</h3>
+
+@if(veiculo == null)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form @onsubmit= "Updateveiculo" >
+                <div class="form-group">
+                    <label for="marca" class="control-label">Marca</label>
+                    <input for="marca" class="form-control" @bind= "veiculo.Marca"/>
+                </div>
+                <div class="form-group">
+                    <label for="modelo" class="control-label">Modelo</label>
+                    <input for="modelo" class="form-control" @bind= "veiculo.Modelo"/>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                    <a href="/veiculos" class="btn btn-light">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+
+@code {
+    [Parameter]
+    public int Id  { get; set; }
+
+    private Veiculo? veiculo;
+
+    protected override async Task OnInitializedAsync()
+    {
+        veiculo = await Http.GetFromJsonAsync<Veiculo>($"https://localhost:4000/api/Veiculos/{Id}");
+    }
+    async Task Updateveiculo()
+    {
+        await Http.PutAsJsonAsync<Veiculo?>($"https://localhost:4000/api/Veiculos/{Id}", veiculo);
+        await Task.Delay(1000);
+        NavigationManager.NavigateTo("/veiculos");
+    }
+}

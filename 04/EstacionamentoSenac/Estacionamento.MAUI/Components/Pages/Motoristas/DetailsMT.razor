@@ -1,0 +1,48 @@
+﻿@page "/motoristas/details/{id:int}"
+@using Estacionamento.MAUI.Models
+@inject HttpClient Http
+
+<h3>Detalhes do Veículo</h3>
+
+@if (motorista == null)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <div>
+        <h4>Motorista</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nome
+            </dt>
+            <dd class="col-sm-10">
+                @motorista.Nome
+            </dd>
+            <dt class="col-sm-2">
+                VeiculoId
+            </dt>
+            <dd class="col-sm-10">
+                @motorista.VeiculoId
+            </dd>
+        </dl>
+    </div>
+
+    <div>
+        <a href="/motoristas" class="btn btn-light">Voltar</a>
+    </div>
+}
+@code {
+    [Parameter]
+
+    public int Id { get; set; }
+
+    private Motorista? motorista = new Motorista();
+
+    protected override async Task OnInitializedAsync()
+    {
+        motorista = await Http.GetFromJsonAsync<Motorista>($"https://localhost:4000/api/Motoristas/{Id} ");
+    }
+
+}

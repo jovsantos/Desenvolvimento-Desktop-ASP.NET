@@ -1,0 +1,53 @@
+﻿@page "/veiculos"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+
+<h3>Index</h3>
+
+<a href="/veiculos/create" class="btn btn-primary">Cadastrar</a>
+
+@if (veiculos == null)
+{
+    <p>Carregando...</p>
+}
+else if (!veiculos.Any())
+{
+    <p>Nenhum veículo encontrado.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var veiculo in veiculos)
+            {
+                <tr>
+                    <td>@veiculo.Id</td>
+                    <td>@veiculo.Marca</td>
+                    <td>@veiculo.Modelo</td>
+                    <td>
+                        <a href="/veiculos/edit/@veiculo.Id" class="btn btn-warning">Editar</a>
+                        <a href="/veiculos/details/@veiculo.Id" class="btn btn-info">Detalhes</a>
+                        <a href="/veiculos/delete/@veiculo.Id" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    List<Veiculo>? veiculos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        veiculos = await Http.GetFromJsonAsync<List<Veiculo>>("https://localhost:4000/api/Veiculos");
+    }
+}

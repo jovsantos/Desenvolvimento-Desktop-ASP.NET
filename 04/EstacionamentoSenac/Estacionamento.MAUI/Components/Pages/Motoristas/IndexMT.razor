@@ -1,0 +1,54 @@
+﻿@page "/motoristas"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+
+<h3>Lista de Motoristas</h3>
+
+<a href="/motoristas/create" class="btn btn-primary">Cadastrar</a>
+
+@if(motoristas == null)
+{
+    <p>Não tem motoristas ainda!</p>
+}
+else if (motoristas.Count == 0)
+{
+    <p>Não há motorista cadastrados!.</p>
+}
+else
+{
+    <table class="table table-striped">
+           <thead>
+               <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Veículo</th>
+                    <th scope="col">Ações</th>
+               </tr>
+           </thead>
+            <tbody>
+                @foreach (var motorista in motoristas)
+                {
+                        <tr>
+                            <td>@motorista.Id</td>
+                            <td>@motorista.Nome</td>
+                            <td>@(motorista.Veiculo != null ? $"{motorista.Veiculo.Modelo}" : $"Não Possui!") </td>
+                            <td>
+                        <a href="/motoristas/edit/@motorista.Id" class="btn btn-warning">Editar</a>
+                        <a href="/motoristas/details/@motorista.Id" class="btn btn-info">Detalhes</a>
+                        <a href="/motoristas/delete/@motorista.Id" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+                }
+            </tbody>
+    </table>
+}
+
+@code 
+{
+    List<Motorista>? motoristas;
+
+    protected override async Task OnInitializedAsync() // Carrega a lista de motoristas ao inicializar o componente
+    {
+        motoristas = await Http.GetFromJsonAsync<List<Motorista>>("https://localhost:4000/api/Motoristas"); // Chama a API para obter a lista de motoristas
+    }
+}
