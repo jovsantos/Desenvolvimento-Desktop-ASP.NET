@@ -1,0 +1,41 @@
+@page "/veiculos/create"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Novo Veículo</h3>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form >
+        <div class="mb-3">
+            <label for="placa" class="form-label">Placa</label>
+            <InputText id="placa" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="modelo" class="form-label">Modelo</label>
+            <InputText id="modelo" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="cor" class="form-label">Cor</label>
+            <InputText id="cor" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="motorista" class="form-label">Motorista</label>
+            @* <InputSelect id="motorista" class="form-select">
+                <option value="0">Selecione um motorista</option>                
+            </InputSelect> *@
+        </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a href="/veiculos" class="btn btn-light">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@code {
+   
+}

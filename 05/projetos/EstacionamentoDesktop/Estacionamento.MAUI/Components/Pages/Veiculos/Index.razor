@@ -1,0 +1,50 @@
+﻿@page "/veiculos"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Lista de Veiculos</h3>
+<a href="/veiculos/create" class="btn btn-primary mb-3">Novo Veiculo</a>
+
+@if (true)
+{
+    <p><em>Carregando...</em></p>
+}
+else if (false)
+{
+    <p><em>Nenhum veiculo encontrado.</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                            <th>Placa</th>
+                            <th>Modelo</th>
+                            <th>Cor</th>                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* @foreach (var veiculo in veiculos) *@
+            {
+                <tr>
+                    <td>Id</td>
+                    <td>Placa</td>
+                    <td>Modelo</td>
+                    <td>Cor</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-info">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+   
+}

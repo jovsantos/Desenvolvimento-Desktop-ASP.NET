@@ -1,0 +1,34 @@
+@page "/"
+
+<PageTitle>Home - Diferenças de Componentes</PageTitle>
+
+<h1>Blazor: Componentes ASP.NET Core vs. Elementos Bootstrap</h1>
+
+<p class="lead">
+    Este projeto demonstra o uso de dois tipos de "blocos de construção" de interface de usuário (UI) em uma aplicação Blazor: Componentes nativos do ASP.NET Core (Blazor) e elementos HTML estilizados com Bootstrap.
+</p>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Componentes ASP.NET Core / Blazor</h2>
+        <p>
+            São classes C# (arquivos <code>.razor</code>) que encapsulam lógica e marcação HTML. Eles são dinâmicos, podem manter estado, responder a eventos do usuário e ser reutilizados em toda a aplicação.
+        </p>
+        <p>
+            <strong>Quando usar?</strong> Use componentes Blazor para criar partes interativas e reutilizáveis da sua UI. Por exemplo, em vez de uma tag <code>&lt;a&gt;</code>, o Blazor oferece o componente <code>&lt;NavLink&gt;</code>. Enquanto ambos geram um link, o <code>&lt;NavLink&gt;</code> é "inteligente": ele sabe qual é a página atual e adiciona automaticamente a classe CSS <code>active</code> ao link correspondente, facilitando a estilização do item de menu ativo.
+        </p>
+        <a href="/aspnetcore/pagetitle" class="btn btn-primary">Ver Exemplos de Componentes ASP.NET Core</a>
+    </div>
+    <div class="col-md-6">
+        <h2>Elementos Bootstrap (HTML/CSS/JS)</h2>
+        <p>
+            São elementos HTML padrão que usam as classes CSS do framework Bootstrap para estilização e, em alguns casos, atributos JavaScript para funcionalidades interativas (como o Accordion ou Modals).
+        </p>
+        <p>
+            <strong>Quando usar?</strong> Use para layout, design e para estilizar o conteúdo dentro dos seus componentes Blazor. Eles são a base visual sobre a qual seus componentes dinâmicos irão operar. Um componente Blazor frequentemente renderiza HTML que inclui classes do Bootstrap. Por exemplo, um <code>&lt;button&gt;</code> HTML com <code>class="btn btn-primary"</code>.
+        </p>
+        <a href="/bootstrap/accordion" class="btn btn-secondary">Ver Exemplos de Elementos Bootstrap</a>
+    </div>
+</div>

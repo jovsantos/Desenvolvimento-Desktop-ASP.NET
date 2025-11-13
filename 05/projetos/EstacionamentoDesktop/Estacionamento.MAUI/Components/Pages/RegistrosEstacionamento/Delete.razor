@@ -1,0 +1,22 @@
+@page "/registros/delete/{Id:int}"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Estacionamento.MAUI.Models
+
+<h3>Excluir Registro</h3>
+
+@if (true)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <p>Você tem certeza que deseja excluir o registro do veículo <strong>Placa</strong>?</p>
+    
+    <button  class="btn btn-danger">Sim, Excluir</button>
+    <a href="/registros" class="btn btn-secondary">Não, Cancelar</a>
+}
+
+@code {
+    
+}

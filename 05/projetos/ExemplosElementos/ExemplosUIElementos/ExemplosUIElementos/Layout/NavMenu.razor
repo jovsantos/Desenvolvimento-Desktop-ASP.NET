@@ -1,0 +1,50 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">ExemplosUIElementos</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="nav flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <div class="nav-link">Bootstrap</div>
+            <NavLink class="nav-link" href="bootstrap/accordion">Accordion</NavLink>
+            <NavLink class="nav-link" href="bootstrap/alerts">Alerts</NavLink>
+            <NavLink class="nav-link" href="bootstrap/buttons">Buttons</NavLink>
+            <NavLink class="nav-link" href="bootstrap/card">Card</NavLink>
+            <NavLink class="nav-link" href="bootstrap/forms">Forms</NavLink>
+            <NavLink class="nav-link" href="bootstrap/modal">Modal</NavLink>
+            <NavLink class="nav-link" href="bootstrap/pagination">Pagination</NavLink>
+            <NavLink class="nav-link" href="bootstrap/toast">Toast</NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <div class="nav-link">ASP.NET Core</div>
+            <NavLink class="nav-link" href="aspnetcore/pagetitle">PageTitle</NavLink>
+            <NavLink class="nav-link" href="aspnetcore/navlink">NavLink</NavLink>
+            <NavLink class="nav-link" href="aspnetcore/forms">ForInputs</NavLink>
+            <NavLink class="nav-link" href="aspnetcore/router">Router</NavLink>
+            <NavLink class="nav-link" href="aspnetcore/layout">Layout</NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

@@ -1,0 +1,23 @@
+@page "/vagas/details/{Id:int}"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+
+<h3>Detalhes da Vaga</h3>
+
+@if (true)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <p><strong>ID:</strong> Id</p>
+    <p><strong>Localização:</strong> Localizacao</p>
+    <p><strong>Tipo:</strong> TipoVaga</p>
+
+    <a href="#" class="btn btn-primary">Editar</a>
+    <a href="#" class="btn btn-secondary">Voltar</a>
+}
+
+@code {
+    
+}

@@ -1,0 +1,30 @@
+@page "/veiculos/details/{id:int}"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Detalhes do Veículo</h3>
+
+@if (true)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <div>
+        <h4>Veículo</h4>
+        <hr />
+        <dl class="row">
+    <p><strong>Placa:</strong> </p>
+    <p><strong>Modelo:</strong> </p>
+    <p><strong>Cor:</strong> </p>
+    <p><strong>Motorista:</strong> </p>
+        </dl>
+    </div>
+    <div>
+        <a href="/veiculos" class="btn btn-light">Voltar</a>
+    </div>
+}
+
+@code {
+    
+}

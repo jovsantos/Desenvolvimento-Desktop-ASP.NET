@@ -1,0 +1,47 @@
+@page "/vagas"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Lista de Vagas</h3>
+
+<a href="/vagas/create" class="btn btn-primary mb-3">Nova Vaga</a>
+
+@if (true)
+{
+    <p><em>Carregando...</em></p>
+}
+else if (false)
+{
+    <p><em>Nenhuma vaga encontrada.</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Localização</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* @foreach (var vaga in vagas) *@
+            {
+                <tr>
+                    <td>Localizacao</td>
+                    <td>TipoVaga</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-info">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    
+}

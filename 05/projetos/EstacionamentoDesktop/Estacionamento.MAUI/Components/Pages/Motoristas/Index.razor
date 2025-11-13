@@ -1,0 +1,51 @@
+@page "/motoristas"
+@inject HttpClient Http
+@using Estacionamento.MAUI.Models
+
+<h3 class="text-center mb-3">Lista de Motoristas</h3>
+
+<a href="/motoristas/create" class="btn btn-primary mb-3">Novo Motorista</a>
+
+@if(true)
+{
+    <p><em>Carregando...</em></p>
+}
+else if (false)
+{
+    <p><em>Nenhum motorista encontrado.</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* @foreach (var motorista in motoristas) *@
+            {
+                <tr>
+                    <td>Id</td>
+                    <td>Nome</td>
+                    <td>Cpf</td>
+                    <td>Telefone</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-info">Detalhes</a>
+                        <a href="#" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+   
+}

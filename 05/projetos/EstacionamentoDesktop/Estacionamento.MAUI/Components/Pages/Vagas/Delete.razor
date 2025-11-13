@@ -1,0 +1,22 @@
+@page "/vagas/delete/{Id:int}"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Estacionamento.MAUI.Models
+
+<h3>Excluir Vaga</h3>
+
+@if (false)
+{
+    <p><em>Carregando...</em></p>
+}
+else
+{
+    <p>Você tem certeza que deseja excluir a vaga <strong>Localizacao</strong>?</p>
+    
+    <button  class="btn btn-danger">Sim, Excluir</button>
+    <a href="/vagas" class="btn btn-secondary">Não, Cancelar</a>
+}
+
+@code {
+    
+}
