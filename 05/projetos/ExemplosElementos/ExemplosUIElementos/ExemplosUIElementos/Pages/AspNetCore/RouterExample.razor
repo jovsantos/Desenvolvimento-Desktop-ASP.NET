@@ -1,0 +1,21 @@
+@page "/aspnetcore/router"
+
+<PageTitle>Router</PageTitle>
+
+<h1>Componente Router</h1>
+
+<p>O componente <code>&lt;Router&gt;</code> no arquivo <code>App.razor</code> é o responsável por interceptar as requisições de navegação do navegador e renderizar o componente da página correspondente.</p>
+
+<p>Ele usa reflexão para encontrar componentes com a diretiva <code>page</code> em seu projeto.</p>
+
+<h2>Rotas com Parâmetros</h2>
+<p>Você pode definir parâmetros diretamente na diretiva <code>page</code>. O valor na URL será automaticamente mapeado para uma propriedade do seu componente com o atributo <code>[Parameter]</code>.</p>
+
+<p>Clique nos links abaixo para navegar para uma rota que aceita um parâmetro de texto:</p>
+
+<ul>
+    <li><NavLink href="/aspnetcore/router/texto-qualquer">Navegar para /router/texto-qualquer</NavLink></li>
+    <li><NavLink href="/aspnetcore/router/outro-exemplo-123">Navegar para /router/outro-exemplo-123</NavLink></li>
+</ul>
+
+<p>O componente de destino (<code>RouterParameterExample.razor</code>) irá capturar e exibir o valor passado na URL.</p>

@@ -1,0 +1,22 @@
+@page "/aspnetcore/pagetitle"
+
+<PageTitle>@pageTitle</PageTitle>
+
+<h1>Exemplo do Componente PageTitle</h1>
+
+<p>O componente <code>&lt;PageTitle&gt;</code> define o título da página (o que aparece na aba do navegador).</p>
+
+<p>O título atual desta página é: <strong>@pageTitle</strong></p>
+
+<p>Clique no botão para alterar o título da página dinamicamente.</p>
+
+<button class="btn btn-primary" @onclick="ChangePageTitle">Alterar Título para "Novo Título!"</button>
+
+@code {
+    private string pageTitle = "Título Inicial";
+
+    private void ChangePageTitle()
+    {
+        pageTitle = "Novo Título!";
+    }
+}

@@ -1,0 +1,90 @@
+@page "/aspnetcore/forms"
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Formulários e Inputs</PageTitle>
+
+<h1>EditForm e Componentes de Input</h1>
+
+<p>O Blazor fornece um conjunto robusto de componentes para lidar com formulários, incluindo validação de dados.</p>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Formulário de Exemplo</h5>
+        <EditForm Model="@exampleModel" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome:</label>
+                <InputText id="name" @bind-Value="exampleModel.Name" class="form-control" />
+                <ValidationMessage For="() => exampleModel.Name" />
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Idade:</label>
+                <InputNumber id="age" @bind-Value="exampleModel.Age" class="form-control" />
+                <ValidationMessage For="() => exampleModel.Age" />
+            </div>
+
+            <div class="mb-3">
+                <label for="birthdate" class="form-label">Data de Nascimento:</label>
+                <InputDate id="birthdate" @bind-Value="exampleModel.BirthDate" class="form-control" />
+                <ValidationMessage For="() => exampleModel.BirthDate" />
+            </div>
+
+            <div class="mb-3 form-check">
+                <InputCheckbox id="isactive" @bind-Value="exampleModel.IsActive" class="form-check-input" />
+                <label for="isactive" class="form-check-label">Ativo</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="category" class="form-label">Categoria:</label>
+                <InputSelect id="category" @bind-Value="exampleModel.Category" class="form-select">
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Categoria 1">Categoria 1</option>
+                    <option value="Categoria 2">Categoria 2</option>
+                    <option value="Categoria 3">Categoria 3</option>
+                </InputSelect>
+                <ValidationMessage For="() => exampleModel.Category" />
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </EditForm>
+    </div>
+</div>
+
+@if (formSubmittedSuccessfully)
+{
+    <div class="alert alert-success mt-3">
+        Formulário enviado com sucesso!
+    </div>
+}
+
+@code {
+    private ExampleModel exampleModel = new();
+    private bool formSubmittedSuccessfully = false;
+
+    private void HandleValidSubmit()
+    {
+        // Aqui você processaria os dados do formulário (ex: salvar no banco de dados)
+        Console.WriteLine("Formulário válido submetido!");
+        formSubmittedSuccessfully = true;
+    }
+
+    public class ExampleModel
+    {
+        [Required(ErrorMessage = "O nome é obrigatório.")]
+        [StringLength(10, ErrorMessage = "O nome é muito longo.")]
+        public string Name { get; set; } = "";
+
+        [Range(18, 100, ErrorMessage = "A idade deve estar entre 18 e 100.")]
+        public int Age { get; set; } = 18;
+
+        [Required]
+        public DateTime? BirthDate { get; set; } = DateTime.Today;
+
+        public bool IsActive { get; set; } = true;
+
+        [Required(ErrorMessage = "Selecione uma categoria.")]
+        public string Category { get; set; } = "";
+    }
+}

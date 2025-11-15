@@ -1,0 +1,20 @@
+@page "/aspnetcore/router/{text}"
+
+<PageTitle>Parâmetro: @Text</PageTitle>
+
+<h1>Página de Parâmetro do Roteador</h1>
+
+<p>Esta página foi carregada porque a rota corresponde ao padrão <code>/aspnetcore/router/{text}</code>.</p>
+
+<p>O valor capturado da URL é:</p>
+
+<div class="alert alert-info">
+    <strong>@Text</strong>
+</div>
+
+<NavLink href="/aspnetcore/router">Voltar para o exemplo do Router</NavLink>
+
+@code {
+    [Parameter]
+    public string? Text { get; set; }
+}

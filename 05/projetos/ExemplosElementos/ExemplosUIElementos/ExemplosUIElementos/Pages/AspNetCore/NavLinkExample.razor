@@ -1,0 +1,20 @@
+@page "/aspnetcore/navlink"
+@using Microsoft.AspNetCore.Components.Routing
+
+<PageTitle>Exemplo de NavLink</PageTitle>
+
+<h1>Exemplo do Componente NavLink</h1>
+
+<p>O <code>&lt;NavLink&gt;</code> é semelhante a uma tag <code>&lt;a&gt;</code>, mas ele automaticamente alterna uma classe CSS 'active' quando o seu 'href' corresponde à URL atual.</p>
+
+<p>Isso é útil para estilizar links de navegação, mostrando ao usuário qual página ele está visitando no momento.</p>
+
+
+<div class="d-flex flex-column">
+    <NavLink class="p-2" href="/aspnetcore/navlink" Match="NavLinkMatch.All">Link para esta página (Match All)</NavLink>
+    <NavLink class="p-2" href="/aspnetcore/navlink/subpagina" Match="NavLinkMatch.All">Link para sub-página (Match All)</NavLink>
+    <NavLink class="p-2" href="/aspnetcore/navlink" Match="NavLinkMatch.Prefix">Link para esta página (Match Prefix)</NavLink>
+</div>
+
+<p class="mt-3">O link ativo (com a classe 'active') será estilizado de forma diferente, conforme definido no CSS do menu de navegação (NavMenu.razor.css).</p>
+
